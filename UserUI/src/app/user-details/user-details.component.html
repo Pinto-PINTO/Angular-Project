@@ -1,0 +1,39 @@
+<div class="jumbtron py-5 bg-dark">
+  <h1 class="text-center text-white">User Details Register</h1>
+</div>
+
+<div class="row pt-5">
+
+  <!-- FORM -->
+  <div class="col-md-6">
+    <app-user-detail-form></app-user-detail-form>
+  </div>
+
+  <!-- ALL USERS TABLE -->
+  <div class="col-md-6">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th>Name</th>
+          <th>Date of Birth</th>
+          <th>Gender</th>
+          <th>Phone Number</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Iterating through the list "service.list" and each corresponding record will be saved in variable "ud" -->
+        <tr *ngFor="let ud of service.list">
+          <td (click)="populateForm(ud)">{{ud.name}}</td>
+          <td (click)="populateForm(ud)">{{ud.dateOfBirth}}</td>
+          <td (click)="populateForm(ud)">{{ud.gender}}</td>
+          <td (click)="populateForm(ud)">{{ud.phoneNumber}}</td>
+          <td>
+            <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(ud.userId)"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

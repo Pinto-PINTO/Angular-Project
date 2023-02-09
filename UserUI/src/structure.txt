@@ -1,0 +1,14 @@
+● src
++---● app
+|   +--● user-details  (Component 1)
+|   |  |--user-details.component.ts|.html    [DB Records]
+|   |  +--● user-detail-form
+|   |  |  |--user-detail-form.component.ts|.html   [Design form for CRUD]
+|   |  
+|   +--● shared   (Component 2)
+|   |  |--user-detail.service.ts    [Interact with the Web API created in .net]   
+|   |  |--user-detail.model.ts
+|   |
+|   |--app.module.ts
+|
+|--index.html (cdn path for bootstrap & fa icons)
